@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5473375028011702753}
   - component: {fileID: 5473375028011702752}
   - component: {fileID: 5473375028011702755}
-  - component: {fileID: 720206987848026506}
   m_Layer: 0
   m_Name: Gravitation Object
   m_TagString: Untagged
@@ -31,7 +30,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2, y: 0.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 851405983337701308}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,17 +135,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionInList: 0
---- !u!114 &720206987848026506
+--- !u!1 &8635663089806839545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851405983337701308}
+  - component: {fileID: 392989897224966342}
+  - component: {fileID: 7106168952007636313}
+  m_Layer: 0
+  m_Name: MergeTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851405983337701308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635663089806839545}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5473375028011702783}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &392989897224966342
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635663089806839545}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.55
+--- !u!114 &7106168952007636313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5473375028011702754}
+  m_GameObject: {fileID: 8635663089806839545}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1010c8363cc1ebd4e9c1808f9a2737e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredForce: 5
-  transformIntoPrefab: {fileID: 0}
+  mergeIntoPrefab: {fileID: 5508245818244581766, guid: 81be647bed73a164cb47269e43863cac,
+    type: 3}
+  setMergedMassFromTotal: 1
