@@ -5,6 +5,7 @@ using UnityEngine;
 public class SlowlyDisappear : MonoBehaviour
 {
     public float disappearAfter;
+    public Gradient colorCurve;
     protected float timeLeft;
     protected SpriteRenderer sprite;
 
@@ -21,9 +22,9 @@ public class SlowlyDisappear : MonoBehaviour
 
     private void Update() {
         timeLeft -= Time.deltaTime;
-        
+
         if(sprite != null) {
-            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, FractionLeft);  
+            sprite.color = colorCurve.Evaluate(FractionLeft);
         }
 
         if(timeLeft < 0) {
