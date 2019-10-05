@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5473375028011702753}
   - component: {fileID: 5473375028011702752}
   - component: {fileID: 5473375028011702755}
+  - component: {fileID: 720206987848026506}
   m_Layer: 0
   m_Name: Gravitation Object
   m_TagString: Untagged
@@ -134,3 +135,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionInList: 0
+--- !u!114 &720206987848026506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5473375028011702754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1010c8363cc1ebd4e9c1808f9a2737e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredForce: 5
+  transformIntoPrefab: {fileID: 0}

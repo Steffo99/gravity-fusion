@@ -7,11 +7,10 @@ public class Gravitation : MonoBehaviour
 {    
     [Header("Forces")]
     protected Vector3 appliedForce;
-    protected float forcesIntensity;
 
     [Header("Internals")]
-    public static List<Gravitation> simulatedObjects;
     public int positionInList;
+    public static List<Gravitation> simulatedObjects;
 
     [Header("References")]
     protected new Rigidbody2D rigidbody;
@@ -28,7 +27,7 @@ public class Gravitation : MonoBehaviour
         }
     }
 
-    private void Awake() {
+    private void OnEnable() {
         if(simulatedObjects == null) {
             simulatedObjects = new List<Gravitation>();
         }
@@ -36,12 +35,15 @@ public class Gravitation : MonoBehaviour
         simulatedObjects.Add(this);
     }
 
+    private void OnDisable() {
+        simulatedObjects.Remove(this);
+    }
+
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         appliedForce = new Vector3(0f, 0f, 0f);
-        forcesIntensity = 0f;
     }
 
     // O(n²)
@@ -53,16 +55,9 @@ public class Gravitation : MonoBehaviour
             float force = gameController.gravitationConstant * this.mass * other.mass / Mathf.Pow(distance, 2);
             Vector3 direction = (other.transform.position - this.transform.position).normalized;
             this.appliedForce += direction * force;
-            this.forcesIntensity += force;
             other.appliedForce -= direction * force;
-            other.forcesIntensity += force;
         }
         rigidbody.AddForce(appliedForce);
-        if(forcesIntensity >= 5f) {
-            GetComponent<SpriteRenderer>().color = Color.yellow;
-        }
-
         appliedForce = new Vector3(0, 0, 0);
-        forcesIntensity = 0f;
     }
 }
