@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public float gravitationConstant = 1;
+    [Header("Global Variables")]
+    public float gravitationConstant;
 }

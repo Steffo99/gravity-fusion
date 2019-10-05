@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Gravitation : MonoBehaviour
-{
+{    
+    [Header("Forces")]
+    protected Vector3 appliedForce;
+    protected float forcesIntensity;
 
-    public static List<Gravitation> simulatedObjects = null;
-    
-    protected new Rigidbody2D rigidbody;
-
-    protected GameController gameController;
-
+    [Header("Internals")]
+    public static List<Gravitation> simulatedObjects;
     public int positionInList;
 
-    protected Vector3 appliedForce;
+    [Header("References")]
+    protected new Rigidbody2D rigidbody;
+    protected GameController gameController;
 
-    protected float forcesIntensity;
 
     protected float mass {
         get {
