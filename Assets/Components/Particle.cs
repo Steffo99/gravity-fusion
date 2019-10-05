@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(Gravitation))]
+[RequireComponent(typeof(Emitter))]
 public class Particle : MonoBehaviour {
     protected int _tier = 0;
 
@@ -15,6 +16,7 @@ public class Particle : MonoBehaviour {
     public Merger merger;
     public Collider2D particleCollider;
     public Collider2D mergeCollider;
+    public Emitter emitter;
 
     public int Tier {
         get {
@@ -48,5 +50,6 @@ public class Particle : MonoBehaviour {
         merger = GetComponentInChildren<Merger>();
         particleCollider = GetComponent<Collider2D>();
         mergeCollider = merger.GetComponent<Collider2D>();
+        emitter = GetComponent<Emitter>();
     }
 }

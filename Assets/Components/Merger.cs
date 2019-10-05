@@ -51,7 +51,11 @@ public class Merger : MonoBehaviour
     protected void DoMerge() {
         particle.Tier += 1;
         foreach(Merger merged in mergeCandidates.ToArray()) {
+            if(merged == null) continue;
             Destroy(merged.particle.gameObject);
         }
+        mergeCandidates.Clear();
+        particle.mergeCollider.enabled = false;
+        particle.mergeCollider.enabled = true;
     }
 }

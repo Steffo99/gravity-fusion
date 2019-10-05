@@ -59,7 +59,7 @@ public class Gravitation : MonoBehaviour
         foreach(Gravitation other in simulatedObjects) {
             if(other.positionInList <= this.positionInList) continue;
             float distance = Vector3.Distance(this.transform.position, other.transform.position);
-            float force = GravitationConstant * this.Mass * other.Mass / Mathf.Pow(distance, 2);
+            float force = GravitationConstant * this.Mass * other.Mass / Mathf.Clamp(Mathf.Pow(distance, 2), 0.1f, float.PositiveInfinity);
             Vector3 direction = (other.transform.position - this.transform.position).normalized;
             if(!this.isStatic) rigidbody.AddForce(direction * force);
             if(!other.isStatic) other.rigidbody.AddForce(-direction * force);

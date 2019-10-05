@@ -12,7 +12,7 @@ public class BlackHole : MonoBehaviour
         }
         set {
             rigidbody.mass = value;
-            Scale = Mass / Mathf.Pow(Mathf.PI, 2);
+            Scale = Mathf.Sqrt(Mass / Mathf.PI);
         }
     }
 
