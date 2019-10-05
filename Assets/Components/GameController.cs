@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    [Header("Global Variables")]
-    public float gravitationConstant;
+    public float gravitationConstant = 2;
+    public int particlesToMerge = 5;
+    public int scaleMultiplier = 3;
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Gravitation : MonoBehaviour
 {    
+    [Header("Config")]
+    public bool isStatic;
+
     [Header("Forces")]
     protected Vector3 appliedForce;
 
@@ -16,15 +19,21 @@ public class Gravitation : MonoBehaviour
     protected new Rigidbody2D rigidbody;
     protected GameController gameController;
 
-
-    protected float mass {
+    public float Mass {
         get {
             return rigidbody.mass;
         }
+    }
 
-        set {
-            rigidbody.mass = value;
+    public float GravitationConstant {
+        get {
+            return gameController.gravitationConstant;
         }
+    }
+
+    private void Awake() {
+        rigidbody = GetComponent<Rigidbody2D>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     private void OnEnable() {
@@ -41,8 +50,6 @@ public class Gravitation : MonoBehaviour
 
     private void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
-        gameController = GameObject.Find("GameController").GetComponent<GameController>();
         appliedForce = new Vector3(0f, 0f, 0f);
     }
 
@@ -52,12 +59,11 @@ public class Gravitation : MonoBehaviour
         foreach(Gravitation other in simulatedObjects) {
             if(other.positionInList <= this.positionInList) continue;
             float distance = Vector3.Distance(this.transform.position, other.transform.position);
-            float force = gameController.gravitationConstant * this.mass * other.mass / Mathf.Pow(distance, 2);
+            float force = GravitationConstant * this.Mass * other.Mass / Mathf.Pow(distance, 2);
             Vector3 direction = (other.transform.position - this.transform.position).normalized;
-            this.appliedForce += direction * force;
-            other.appliedForce -= direction * force;
+            if(!this.isStatic) rigidbody.AddForce(direction * force);
+            if(!other.isStatic) other.rigidbody.AddForce(-direction * force);
         }
-        rigidbody.AddForce(appliedForce);
         appliedForce = new Vector3(0, 0, 0);
     }
 }

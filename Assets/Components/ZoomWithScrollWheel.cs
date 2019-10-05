@@ -5,11 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class ZoomWithScrollWheel : MonoBehaviour
 {
-    [Header("Config")]
     public float zoomMultiplier;
     public string zoomAxisName;
 
-    [Header("References")]
     protected new Camera camera;
 
     void Start()
@@ -19,7 +17,7 @@ public class ZoomWithScrollWheel : MonoBehaviour
 
     void Update()
     {
-        float mouseWheel = Input.GetAxis(zoomAxisName);
+        float mouseWheel = Input.GetAxisRaw(zoomAxisName);
         if(mouseWheel != 0) {
             camera.orthographicSize = Mathf.Clamp(camera.orthographicSize - mouseWheel * zoomMultiplier, 0, float.PositiveInfinity);
         }

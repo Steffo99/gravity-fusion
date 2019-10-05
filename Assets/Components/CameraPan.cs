@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
-public class PanWithMMB : MonoBehaviour
+public class CameraPan : MonoBehaviour
 {    
-    [Header("References")]
-    protected new Camera camera;
+    public string axisName;
 
-    [Header("Internals")]
+    protected new Camera camera;
     protected Vector3? lastMousePosition;
 
     private void Start() {
@@ -17,9 +16,9 @@ public class PanWithMMB : MonoBehaviour
     }
 
     private void Update() {
-        bool mmbIsPressed = Input.GetMouseButton(2);
+        bool panIsPressed = Input.GetAxisRaw(axisName) != 0f;
         Vector3? currentMousePosition = null;
-        if(mmbIsPressed) {
+        if(panIsPressed) {
             currentMousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
             if(lastMousePosition.HasValue) {
                 Vector3 positionDelta = lastMousePosition.Value - currentMousePosition.Value;
