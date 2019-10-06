@@ -7,7 +7,13 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     public AudioSource baseLayer;
-    public List<AudioSource> layers;
+    public float changeSpeed = 1f;
+
+    [BeforeStart]
+    public AudioSource[] layers;
+
+    protected float baseLayerTargetVolume;
+    protected float[] targetVolume;
 
     protected bool neverStarted;
 
@@ -16,15 +22,20 @@ public class MusicManager : MonoBehaviour
         foreach(AudioSource audioSource in layers) {
             audioSource.volume = 0;
         }
+        targetVolume = new float[layers.Length];
+        for(int i = 0; i < layers.Length; i++) {
+            targetVolume[i] = 0f;
+        }
+        baseLayerTargetVolume = 1f;
         neverStarted = true;
     }
 
     public void UpdateLayers(int maxTier) {
         if(maxTier == -1) {
-            baseLayer.volume = 1f;
+            baseLayerTargetVolume = 1f;
         }
         else {
-            baseLayer.volume = 0f;
+            baseLayerTargetVolume = 0f;
         }
 
         if(neverStarted) {
@@ -34,20 +45,39 @@ public class MusicManager : MonoBehaviour
             neverStarted = false;
         }
 
-        if(maxTier >= layers.Count) {
-            foreach(AudioSource layer in layers) {
-                layer.volume = 1f;
+        if(maxTier >= layers.Length) {
+            for(int i = 0; i < layers.Length; i++) {
+                targetVolume[i] = 1f;
             }
         }
         else {
-            for(int i = 0; i < layers.Count; i++) {
+            for(int i = 0; i < layers.Length; i++) {
                 if(maxTier >= i) {
-                    layers[i].volume = 1f;
+                    targetVolume[i] = 1f;
                 }
                 else {
-                    layers[i].volume = 0f;
+                    targetVolume[i] = 0f;
                 }
             }
         }
     }
+
+    protected void Update() {
+        if(baseLayer.volume > baseLayerTargetVolume) {
+            baseLayer.volume = Mathf.Clamp(baseLayer.volume - Time.deltaTime * changeSpeed, baseLayerTargetVolume, float.PositiveInfinity);
+        }
+        else if(baseLayer.volume < baseLayerTargetVolume) {
+            baseLayer.volume = Mathf.Clamp(baseLayer.volume + Time.deltaTime * changeSpeed, 0f, baseLayerTargetVolume);
+        }
+
+        for(int i = 0; i < layers.Length; i++) {
+            if(layers[i].volume > targetVolume[i]) {
+                layers[i].volume = Mathf.Clamp(layers[i].volume - Time.deltaTime * changeSpeed, targetVolume[i], float.PositiveInfinity);
+            }
+            else if(layers[i].volume < targetVolume[i]) {
+                layers[i].volume = Mathf.Clamp(layers[i].volume + Time.deltaTime * changeSpeed, 0f, targetVolume[i]);
+            }
+        }
+    }
+
 }

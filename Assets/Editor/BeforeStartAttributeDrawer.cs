@@ -2,8 +2,8 @@
 using UnityEngine;
 using UnityEditor;
 
-[CustomPropertyDrawer(typeof(AfterStart))]
-public class AfterStartAttributeDrawer : PropertyDrawer
+[CustomPropertyDrawer(typeof(BeforeStart))]
+public class BeforeStartAttributeDrawer : PropertyDrawer
 {
     // Necessary since some properties tend to collapse smaller than their content
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -14,10 +14,8 @@ public class AfterStartAttributeDrawer : PropertyDrawer
     // Draw a disabled property field
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        GUI.enabled = Application.isPlaying;
+        GUI.enabled = !Application.isPlaying;
         EditorGUI.PropertyField(position, property, label, true);
         GUI.enabled = true;
     }
 }
-
-public class AfterStart : PropertyAttribute {}
