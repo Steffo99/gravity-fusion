@@ -14,11 +14,16 @@ public class Gravitation : MonoBehaviour
 
     [Header("Internals")]
     public int positionInList;
-    public static List<Gravitation> simulatedObjects;
 
     [Header("References")]
     protected new Rigidbody2D rigidbody;
     protected GameController gameController;
+
+    public List<Gravitation> SimulatedObjects {
+        get {
+            return gameController.simulatedObjects;
+        }
+    }
 
     public float Mass {
         get {
@@ -38,15 +43,12 @@ public class Gravitation : MonoBehaviour
     }
 
     private void OnEnable() {
-        if(simulatedObjects == null) {
-            simulatedObjects = new List<Gravitation>();
-        }
-        positionInList = simulatedObjects.Count;
-        simulatedObjects.Add(this);
+        positionInList = SimulatedObjects.Count;
+        SimulatedObjects.Add(this);
     }
 
     private void OnDisable() {
-        simulatedObjects.Remove(this);
+        SimulatedObjects.Remove(this);
     }
 
     private void Start()
@@ -57,7 +59,7 @@ public class Gravitation : MonoBehaviour
     // O(n²)
     private void FixedUpdate()
     {
-        foreach(Gravitation other in simulatedObjects.Skip<Gravitation>(positionInList + 1)) {
+        foreach(Gravitation other in SimulatedObjects.Skip<Gravitation>(positionInList + 1)) {
             if(other.positionInList <= this.positionInList) continue;
             float distance = Vector3.Distance(this.transform.position, other.transform.position);
             float force = GravitationConstant * this.Mass * other.Mass / Mathf.Clamp(Mathf.Pow(distance, 2), 0.1f, float.PositiveInfinity);

@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 8346599265516913425}
   m_Layer: 0
   m_Name: Particle
-  m_TagString: Untagged
+  m_TagString: Particle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f9558d29b4414a9c0661fe7b075a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 0
+  health: 0
 --- !u!1 &7524624946521742832
 GameObject:
   m_ObjectHideFlags: 0

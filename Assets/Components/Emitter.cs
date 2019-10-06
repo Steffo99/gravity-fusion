@@ -23,6 +23,7 @@ public class Emitter : MonoBehaviour
     protected void Emit() {
         Invoke("Emit", emissionPeriod);
         if(particle.Tier < 2) return;
+        if(particle.Tier <= particle.gameController.maxTierPresent - 4) return;
         for(int i = 0; i < emissionQuantity; i++) {
             GameObject newObject = Instantiate(particle.ParticlePrefab, transform.position, Quaternion.identity);
             Particle newParticle = newObject.GetComponent<Particle>();

@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour
     public GameObject particlePrefab;
     public Gradient[] tierGradients;
     public RuntimeAnimatorController[] tierAnimation;
+    public List<Gravitation> simulatedObjects;
+    public int maxTierPresent;
 
     [Header("Upgrades")]
     public float[] upgradePushForce;
@@ -40,5 +42,28 @@ public class GameController : MonoBehaviour
         pusher = Camera.main.GetComponent<PushOnMouseClick>();
         panner = Camera.main.GetComponent<CameraPan>();
         musicManager = GetComponent<MusicManager>();
+        simulatedObjects = new List<Gravitation>();
+    }
+
+    protected void Start() {
+        maxTierPresent = -1;
+    }
+
+    public void CheckNewMaxTier(int tier) {
+        if(tier > maxTierPresent) {
+            maxTierPresent = tier;
+            musicManager.UpdateLayers(maxTierPresent);
+        }
+    }
+
+    public void RecalculateMaxTier() {
+        maxTierPresent = -1;
+        foreach(GameObject particleObject in GameObject.FindGameObjectsWithTag("Particle")) {
+            Particle particle = particleObject.GetComponent<Particle>();
+            if(particle.Tier > maxTierPresent) {
+                maxTierPresent = particle.Tier;
+            }
+        };
+        musicManager.UpdateLayers(maxTierPresent);
     }
 }
