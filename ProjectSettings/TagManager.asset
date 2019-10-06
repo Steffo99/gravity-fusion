@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Particle
   - BlackHole
+  - Canvas
   layers:
   - Default
   - TransparentFX

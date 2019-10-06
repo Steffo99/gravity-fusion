@@ -49,12 +49,6 @@ public class Particle : MonoBehaviour {
         }
     }
 
-    public float Duration {
-        get {
-            return gameController.particleDurationPerTier * (Tier + 1);
-        }
-    }
-
     public GameObject ParticlePrefab {
         get {
             return gameController.particlePrefab;

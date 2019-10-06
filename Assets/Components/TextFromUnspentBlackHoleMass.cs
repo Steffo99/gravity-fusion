@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class TextFromBlackHoleMass : MonoBehaviour
+public class TextFromUnspentBlackHoleMass : MonoBehaviour
 {
     protected Text text;
     public BlackHole blackHole;
@@ -16,6 +16,6 @@ public class TextFromBlackHoleMass : MonoBehaviour
 
     protected void Update()
     {
-        text.text = blackHole.Mass.ToString("0");
+        text.text = blackHole.UnspentMass.ToString("0");
     }
 }

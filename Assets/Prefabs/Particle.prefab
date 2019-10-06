@@ -280,8 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae389aca0e2e82408a1ddd869680dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceBase: 1000
-  forceVariance: 250
+  forceBase: 1
+  forceVariance: 0
   emissionPeriod: 2
   emissionQuantity: 2
 --- !u!114 &6410014372807664776

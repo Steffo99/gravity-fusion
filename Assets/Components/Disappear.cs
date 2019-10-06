@@ -20,7 +20,7 @@ public class Disappear : MonoBehaviour
     }
 
     protected void Update() {
-        health -= Mathf.Pow(5, particle.gameController.maxTierPresent - particle.Tier - 4) * Time.deltaTime;
+        health -= Mathf.Pow(particle.gameController.particleDurationConstant, particle.gameController.maxTierPresent - particle.Tier - 4) * Time.deltaTime;
 
         if(health < 0) {
             Destroy(this.gameObject);
