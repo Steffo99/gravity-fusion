@@ -17,14 +17,21 @@ public class Particle : MonoBehaviour {
     public Collider2D particleCollider;
     public Collider2D mergeCollider;
     public Emitter emitter;
+    public Animator animator;
+    public Hue hue;
+    public SpriteRenderer mainRenderer;
+    public SpriteRenderer auraRenderer;
+    public SpriteRenderer detailsRenderer;
 
     public int Tier {
         get {
             return _tier;
         }
         set {
-            _tier += 1;
+            _tier = value;
             Scale *= gameController.scaleMultiplier;
+            animator.runtimeAnimatorController = gameController.tierAnimation[_tier];
+            hue.PossibleColors = gameController.tierGradients[_tier];
         }
     }
 
@@ -51,5 +58,15 @@ public class Particle : MonoBehaviour {
         particleCollider = GetComponent<Collider2D>();
         mergeCollider = merger.GetComponent<Collider2D>();
         emitter = GetComponent<Emitter>();
+        mainRenderer = GetComponent<SpriteRenderer>();
+        auraRenderer = transform.Find("Aura").GetComponent<SpriteRenderer>();
+        detailsRenderer = transform.Find("Details").GetComponent<SpriteRenderer>();
+        hue = GetComponent<Hue>();
+        animator = GetComponent<Animator>();
+    }
+
+    protected void Start() {
+        animator.runtimeAnimatorController = gameController.tierAnimation[_tier];
+        hue.PossibleColors = gameController.tierGradients[_tier];
     }
 }

@@ -5,7 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class Merger : MonoBehaviour
 {
+    [HideInInspector]
     public Particle particle;
+    public float mergeAfterSeconds;
+    
+    protected bool mergeEnabled;
+
     protected List<Merger> mergeCandidates;
 
     protected Collider2D Collider {
@@ -27,9 +32,16 @@ public class Merger : MonoBehaviour
 
     protected void Start() {
         mergeCandidates = new List<Merger>();
+        mergeEnabled = false;
+        Invoke("EnableMerge", mergeAfterSeconds);
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    protected void EnableMerge() {
+        mergeEnabled = true;
+        if(CanMerge()) DoMerge();
+    }
+
+    protected void OnTriggerEnter2D(Collider2D other) {
         Merger otherMerger = other.GetComponent<Merger>();
         if(otherMerger == null) return;
         Particle otherParticle = otherMerger.particle;
@@ -38,14 +50,18 @@ public class Merger : MonoBehaviour
         if(CanMerge()) DoMerge();
     }
 
-    private void OnTriggerExit2D(Collider2D other) {
+    protected void OnTriggerExit2D(Collider2D other) {
         Merger otherMerger = other.GetComponent<Merger>();
         if(otherMerger == null) return;
         mergeCandidates.Remove(otherMerger);
     }
 
     protected bool CanMerge() {
-        return mergeCandidates.Count >= ParticlesToMerge;
+        int mergeableCount = 0;
+        foreach(Merger mergeCandidate in mergeCandidates) {
+            if(mergeCandidate.mergeEnabled) mergeableCount += 1;
+        }
+        return mergeEnabled && mergeableCount >= ParticlesToMerge;
     }
 
     protected void DoMerge() {

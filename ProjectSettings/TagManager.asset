@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Aura
+    uniqueID: 2246474703
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Details
+    uniqueID: 3719774503
     locked: 0

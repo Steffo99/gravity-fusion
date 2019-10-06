@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -56,7 +57,7 @@ public class Gravitation : MonoBehaviour
     // O(n²)
     private void FixedUpdate()
     {
-        foreach(Gravitation other in simulatedObjects) {
+        foreach(Gravitation other in simulatedObjects.Skip<Gravitation>(positionInList + 1)) {
             if(other.positionInList <= this.positionInList) continue;
             float distance = Vector3.Distance(this.transform.position, other.transform.position);
             float force = GravitationConstant * this.Mass * other.Mass / Mathf.Clamp(Mathf.Pow(distance, 2), 0.1f, float.PositiveInfinity);

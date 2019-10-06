@@ -14,7 +14,7 @@ public class SpawnOnMouseClick : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButton(mouseButton)) {
+        if(Input.GetMouseButtonDown(mouseButton)) {
             Vector3 mousePosition = GetWorldMousePosition();
             GameObject instance = Instantiate(prefabToSpawn, new Vector3(mousePosition.x, mousePosition.y, 0f), Quaternion.identity);
         }
