@@ -4,36 +4,50 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[Serializable]
-public class MusicLayer {
-    public AudioSource audioSource;
-
-    public MusicLayer(AudioSource audioSource) {
-        this.audioSource = audioSource;
-    }
-
-    public float Volume {
-        get {
-            return audioSource.volume;
-        }
-        set {
-            audioSource.volume = value;
-        }
-    }
-}
-
-
 public class MusicManager : MonoBehaviour
 {
-    public List<MusicLayer> layers;
+    public AudioSource baseLayer;
+    public List<AudioSource> layers;
 
-    void Start()
+    protected bool neverStarted;
+
+    protected void Start()
     {
-        List<AudioSource> audioSources = new List<AudioSource>();
-        GetComponentsInChildren<AudioSource>(true, audioSources);
-        foreach(AudioSource audioSource in audioSources) {
-            MusicLayer layer = new MusicLayer(audioSource);
-            layer.Volume = 0;
+        foreach(AudioSource audioSource in layers) {
+            audioSource.volume = 0;
+        }
+        neverStarted = true;
+    }
+
+    public void UpdateLayers(int maxTier) {
+        if(maxTier == -1) {
+            baseLayer.volume = 1f;
+        }
+        else {
+            baseLayer.volume = 0f;
+        }
+
+        if(neverStarted) {
+            foreach(AudioSource layer in layers) {
+                layer.Play();
+            }
+            neverStarted = false;
+        }
+
+        if(maxTier >= layers.Count) {
+            foreach(AudioSource layer in layers) {
+                layer.volume = 1f;
+            }
+        }
+        else {
+            for(int i = 0; i < layers.Count; i++) {
+                if(maxTier >= i) {
+                    layers[i].volume = 1f;
+                }
+                else {
+                    layers[i].volume = 0f;
+                }
+            }
         }
     }
 }

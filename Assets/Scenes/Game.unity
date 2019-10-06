@@ -350,6 +350,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackHole
       objectReference: {fileID: 0}
+    - target: {fileID: 2084275844800580026, guid: d2ff0823532914e4a8f5ecd0efc2a146,
+        type: 3}
+      propertyPath: m_TagString
+      value: BlackHole
+      objectReference: {fileID: 0}
     - target: {fileID: 2084275844800580021, guid: d2ff0823532914e4a8f5ecd0efc2a146,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -585,45 +590,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4937878819460165300, guid: bf08d766b6e86cf4a8773489143ab2d5,
+    - target: {fileID: 4850948939192426854, guid: bf08d766b6e86cf4a8773489143ab2d5,
         type: 3}
-      propertyPath: upgradeParticleCount.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4937878819460165300, guid: bf08d766b6e86cf4a8773489143ab2d5,
-        type: 3}
-      propertyPath: upgradePushRadius.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4937878819460165300, guid: bf08d766b6e86cf4a8773489143ab2d5,
-        type: 3}
-      propertyPath: upgradePushForce.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4937878819460165300, guid: bf08d766b6e86cf4a8773489143ab2d5,
-        type: 3}
-      propertyPath: upgradeParticleCount.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4937878819460165300, guid: bf08d766b6e86cf4a8773489143ab2d5,
-        type: 3}
-      propertyPath: upgradeParticleCount.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4937878819460165300, guid: bf08d766b6e86cf4a8773489143ab2d5,
-        type: 3}
-      propertyPath: upgradeParticleCount.Array.data[2]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4937878819460165300, guid: bf08d766b6e86cf4a8773489143ab2d5,
-        type: 3}
-      propertyPath: upgradeParticleCount.Array.data[3]
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4937878819460165300, guid: bf08d766b6e86cf4a8773489143ab2d5,
-        type: 3}
-      propertyPath: upgradeParticleCount.Array.data[4]
-      value: 10
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf08d766b6e86cf4a8773489143ab2d5, type: 3}
@@ -692,6 +662,11 @@ PrefabInstance:
     - target: {fileID: 9221969453073420272, guid: 6baf9ec6ad712d940a83a3bf6ae3e6b1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700387586635078816, guid: 6baf9ec6ad712d940a83a3bf6ae3e6b1,
+        type: 3}
+      propertyPath: pushRadius
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

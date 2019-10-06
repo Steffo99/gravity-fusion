@@ -27,8 +27,9 @@ public class Particle : MonoBehaviour {
         set {
             _tier = value;
             Scale = Mathf.Pow(gameController.scaleMultiplier, _tier);
-            animator.runtimeAnimatorController = gameController.tierAnimation[_tier];
-            hue.PossibleColors = gameController.tierGradients[_tier];
+            animator.runtimeAnimatorController = gameController.tierAnimation[_tier % gameController.tierAnimation.Length];
+            hue.PossibleColors = gameController.tierGradients[_tier % gameController.tierGradients.Length];
+            gameController.CheckNewMaxTier(_tier);
             disappear.ResetTimer();
         }
     }
@@ -77,7 +78,13 @@ public class Particle : MonoBehaviour {
     }
 
     protected void Start() {
-        animator.runtimeAnimatorController = gameController.tierAnimation[_tier];
-        hue.PossibleColors = gameController.tierGradients[_tier];
+        animator.runtimeAnimatorController = gameController.tierAnimation[_tier % gameController.tierAnimation.Length];
+        hue.PossibleColors = gameController.tierGradients[_tier % gameController.tierGradients.Length];
+    }
+    
+    protected void OnDestroy() {
+        if(Tier >= gameController.maxTierPresent) {
+            gameController.RecalculateMaxTier();
+        }
     }
 }

@@ -4,31 +4,25 @@ using UnityEngine;
 
 public class Disappear : MonoBehaviour
 {
-    public float timeLeft;
+    public float health;
     protected Particle particle;
-
-    public float FractionLeft {
-        get {
-            return timeLeft / particle.Duration;
-        }
-    }
 
     protected void Awake() {
         particle = GetComponent<Particle>();
     }
 
-    private void Start() {
+    protected void Start() {
         ResetTimer();
     }
 
     public void ResetTimer() {
-        timeLeft = particle.Duration;
+        health = 1f;
     }
 
-    private void Update() {
-        timeLeft -= Time.deltaTime;
+    protected void Update() {
+        health -= Mathf.Pow(5, particle.gameController.maxTierPresent - particle.Tier - 4) * Time.deltaTime;
 
-        if(timeLeft < 0) {
+        if(health < 0) {
             Destroy(this.gameObject);
         }
     }

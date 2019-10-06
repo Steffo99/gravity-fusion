@@ -28,10 +28,10 @@ public class Merger : MonoBehaviour
     
     protected void Awake() {
         particle = GetComponentInParent<Particle>();
+        mergeCandidates = new List<Merger>();
     }
 
     protected void Start() {
-        mergeCandidates = new List<Merger>();
         mergeEnabled = false;
         Invoke("EnableMerge", mergeAfterSeconds);
     }

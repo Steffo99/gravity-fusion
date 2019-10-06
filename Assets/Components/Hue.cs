@@ -28,7 +28,7 @@ public class Hue : MonoBehaviour
     }
 
     public void RefreshColor() {
-        Vector4 hsva = new Vector4(0, 0, particle.disappear.FractionLeft - 1, 0);
+        Vector4 hsva = new Vector4(0, 0, particle.disappear.health - 1, 0);
         Color.RGBToHSV(color, out hsva.x, out _, out _);
         material.SetVector("_HSVAAdjust", hsva);
     }
