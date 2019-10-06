@@ -1,9 +1,9 @@
-﻿//From https://answers.unity.com/questions/442342/how-to-make-public-variable-read-only-during-run-t.html
+//From https://answers.unity.com/questions/442342/how-to-make-public-variable-read-only-during-run-t.html
 using UnityEngine;
 using UnityEditor;
 
-[CustomPropertyDrawer(typeof(BeforeStart))]
-public class BeforeStartAttributeDrawer : PropertyDrawer
+[CustomPropertyDrawer(typeof(AfterStart))]
+public class AfterStartAttributeDrawer : PropertyDrawer
 {
     // Necessary since some properties tend to collapse smaller than their content
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -14,10 +14,8 @@ public class BeforeStartAttributeDrawer : PropertyDrawer
     // Draw a disabled property field
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        GUI.enabled = !Application.isPlaying;
+        GUI.enabled = Application.isPlaying;
         EditorGUI.PropertyField(position, property, label, true);
         GUI.enabled = true;
     }
 }
-
-public class BeforeStart : PropertyAttribute {}
