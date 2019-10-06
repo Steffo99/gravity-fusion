@@ -3,10 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Collider2D))]
-[RequireComponent(typeof(Gravitation))]
-[RequireComponent(typeof(Emitter))]
 public class Particle : MonoBehaviour {
     protected int _tier = 0;
 
@@ -22,6 +18,7 @@ public class Particle : MonoBehaviour {
     public SpriteRenderer mainRenderer;
     public SpriteRenderer auraRenderer;
     public SpriteRenderer detailsRenderer;
+    public Disappear disappear;
 
     public int Tier {
         get {
@@ -29,9 +26,10 @@ public class Particle : MonoBehaviour {
         }
         set {
             _tier = value;
-            Scale *= gameController.scaleMultiplier;
+            Scale = Mathf.Pow(gameController.scaleMultiplier, _tier);
             animator.runtimeAnimatorController = gameController.tierAnimation[_tier];
             hue.PossibleColors = gameController.tierGradients[_tier];
+            disappear.ResetTimer();
         }
     }
 
@@ -46,7 +44,19 @@ public class Particle : MonoBehaviour {
 
     public float Mass {
         get {
-            return Mathf.Pow(gameController.particlesToMerge, Tier);
+            return Mathf.Pow(gameController.particlesToMerge + 1, Tier);
+        }
+    }
+
+    public float Duration {
+        get {
+            return gameController.particleDurationPerTier * (Tier + 1);
+        }
+    }
+
+    public GameObject ParticlePrefab {
+        get {
+            return gameController.particlePrefab;
         }
     }
 
@@ -63,6 +73,7 @@ public class Particle : MonoBehaviour {
         detailsRenderer = transform.Find("Details").GetComponent<SpriteRenderer>();
         hue = GetComponent<Hue>();
         animator = GetComponent<Animator>();
+        disappear = GetComponent<Disappear>();
     }
 
     protected void Start() {
