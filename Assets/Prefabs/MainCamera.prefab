@@ -130,7 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9227c19eff39e704cba3b8e354506146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameController: {fileID: 0}
   mouseButton: 1
   pushForce: 0
   pushRadius: 0

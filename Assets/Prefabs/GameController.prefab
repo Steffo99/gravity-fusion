@@ -479,27 +479,15 @@ MonoBehaviour:
   tierAnimation:
   - {fileID: 9100000, guid: 20f89caa72793bb44b234d8992bad691, type: 2}
   - {fileID: 9100000, guid: 6537c3711346924459455feaf4579420, type: 2}
+  - {fileID: 9100000, guid: 6537c3711346924459455feaf4579420, type: 2}
   - {fileID: 9100000, guid: c0850c00f73c1a7448391a14a513e274, type: 2}
+  - {fileID: 9100000, guid: 93a7bcdb67702484494f3bbd777ad2e8, type: 2}
+  - {fileID: 9100000, guid: 93a7bcdb67702484494f3bbd777ad2e8, type: 2}
   simulatedObjects: []
   maxTierPresent: 0
-  upgradePushForce:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  upgradePushRadius:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  upgradeParticleCount:
-  - 1
-  - 2
-  - 4
-  - 7
-  - 10
+  upgradePushForce: []
+  upgradePushRadius: []
+  upgradeParticleCount: []
   levelPush: 0
   levelClick: 0
   spawner: {fileID: 0}
