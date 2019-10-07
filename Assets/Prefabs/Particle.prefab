@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae389aca0e2e82408a1ddd869680dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceBase: 1
+  forceBase: 2
   forceVariance: 0
   emissionPeriod: 2
   emissionQuantity: 2
@@ -308,7 +308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3f9558d29b4414a9c0661fe7b075a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
 --- !u!1 &7524624946521742832
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,5 +449,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1010c8363cc1ebd4e9c1808f9a2737e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle: {fileID: 0}
   mergeAfterSeconds: 0.2
+  particle: {fileID: 0}

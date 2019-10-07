@@ -6,7 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Gravitation : MonoBehaviour
 {    
-    [Header("Config")]
     public bool isStatic;
 
     [HideInInspector]

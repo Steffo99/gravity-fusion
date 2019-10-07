@@ -22,7 +22,7 @@ public class SpawnOnMouseClick : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(mouseButton)) {
+        if(!gameController.upgradePanel.activeSelf && Input.GetMouseButtonDown(mouseButton)) {
             Vector3 mousePosition = GetWorldMousePosition();
             for(int i = 0; i < spawnCount; i++) {
                 GameObject particleObject = Instantiate(gameController.particlePrefab, new Vector3(mousePosition.x, mousePosition.y, 0f), Quaternion.identity);
