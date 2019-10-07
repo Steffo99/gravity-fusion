@@ -8,7 +8,7 @@ public class Gravitation : MonoBehaviour
 {    
     public bool isStatic;
 
-    protected new Rigidbody2D rigidbody;
+    protected Rigidbody2D rigidbody;
     protected GameController gameController;
 
     public List<Gravitation> SimulatedObjects {

@@ -18,7 +18,7 @@ public class Tutorial : MonoBehaviour {
     }
 
     public void Step2() {
-        gameController.messageBox.Write("Click somewhere to spawn a Particle!", Step3);
+        gameController.messageBox.Write("Click outside the black hole to spawn a Particle!", Step3);
     }
     
     public void Step3() {
@@ -26,11 +26,15 @@ public class Tutorial : MonoBehaviour {
     }
 
     public void Step4() {
-        gameController.messageBox.Write("If a Particle touches the Black Hole, it gets eaten!", Step5);
+        gameController.messageBox.Write("If a Particle touches the Black Hole, it gets eaten!", Step45);
+    }
+
+    public void Step45() {        
+        gameController.messageBox.Write("Zoom in and out with the Mouse Scroll Wheel!", Step5);
     }
 
     public void Step5() {        
-        gameController.messageBox.Write("Pan the camera with Middle Mouse Button!", Step6);
+        gameController.messageBox.Write("Pan the camera with Middle Mouse Button (or Space)!", Step6);
     }
     
     public void Step6() {        

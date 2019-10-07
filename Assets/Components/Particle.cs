@@ -7,7 +7,7 @@ public class Particle : MonoBehaviour {
     protected int _tier = 0;
 
     [HideInInspector]
-    public new Rigidbody2D rigidbody;
+    public Rigidbody2D rigidbody;
     [HideInInspector]
     public Gravitation gravitation;
     [HideInInspector]

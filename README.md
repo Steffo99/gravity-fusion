@@ -1,6 +1,41 @@
-# ![](/Assets/Media/github_icon.png) LD45
+# ![](/Assets/Media/github_icon.png) Gravity Fusion
 
-A Ludum Dare 45 Project
+_A colorful incremental game_
+
+## About
+
+Welcome to Gravity Fusion, the best physics simulator in the galaxy!  
+Well... Maybe not the best in the Milky Way, but the best in _your_ galaxy!
+
+In Gravity Fusion you'll create your own galaxy, starting from the black hole at the center and then slowly adding Particles around it!
+
+All Particles are affected by the [Law of Universal Gravitation](https://en.wikipedia.org/wiki/Newton's_law_of_universal_gravitation), and so they attract each other, and are attracted towards the black hole. 
+
+If 6 Particles of the same quality touch, they merge into a heavier, higher quality Particle that may autonomously produce smaller Particles. 
+
+Be careful: the black hole can eat your particles, gaining more Mass!  
+
+However, if you let your black hole grow, you may be able to buy some upgrades from a friendly alien...
+
+![](/Assets/Sprites/NAvi_cella.png)
+
+## Controls
+
+- **LMB** (Left mouse button) - Spawn a Particle
+- **MMB** (Middle mouse button) / **Space** - Pan camera
+- **Scroll wheel** - Zoom camera
+- **RMB** (Right mouse button) - (Requires upgrade) Use the Anti-G Field
+- **R** - Center the camera on the black hole
+- **Tab** / **Escape** - Upgrade menu
+- **Alt**+**F4** - Quit game
+
+## Screenshots
+
+![](/Assets/Media/screenshot1.png)
+
+![](/Assets/Media/screenshot2.png)
+
+![](/Assets/Media/screenshot3.png)
 
 ## Licensing info
 

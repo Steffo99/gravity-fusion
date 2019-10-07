@@ -8,7 +8,7 @@ public class ZoomWithScrollWheel : MonoBehaviour
     public float zoomMultiplier;
     public string zoomAxisName;
 
-    protected new Camera camera;
+    protected Camera camera;
 
     void Start()
     {
