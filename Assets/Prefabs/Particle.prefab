@@ -267,7 +267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStatic: 0
-  positionInList: 0
 --- !u!114 &2183820810783596218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae389aca0e2e82408a1ddd869680dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceBase: 2
+  forceBase: 0.1
   forceVariance: 0
   emissionPeriod: 2
   emissionQuantity: 2

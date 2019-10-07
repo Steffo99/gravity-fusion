@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class TempUpgradesToggler : MonoBehaviour
 {
-    public GameObject upgrades;
+    protected GameController gameController;
 
-    protected void Start() {
-        Debug.LogWarning("TempUpgradesToggler should not be used.");
+    protected void Awake() {
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     protected void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P)) {
-            upgrades.SetActive(!upgrades.activeSelf);
+        if(Input.GetKeyDown(KeyCode.Tab) && gameController.blackHole != null) {
+            gameController.upgradePanel.gameObject.SetActive(!gameController.upgradePanel.gameObject.activeSelf);
         }
     }
 }

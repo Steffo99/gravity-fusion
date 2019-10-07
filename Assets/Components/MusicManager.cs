@@ -37,17 +37,10 @@ public class MusicManager : MonoBehaviour
         gameController = GetComponent<GameController>();
     }
 
-    public void UpdateLayers(int maxTier) {
-        if(gameController.blackHole == null) return;
-
-        if(maxTier == -1) {
-            baseLayerTargetVolume = 1f;
-        }
-        else {
-            baseLayerTargetVolume = 0f;
-        }
-
+    public void UpdateLayers(int maxTier) 
+    {    
         if(neverStarted) {
+            baseLayer.Play();
             foreach(AudioSource layer in layers) {
                 if(layer != null) {
                     layer.Play();
@@ -55,6 +48,14 @@ public class MusicManager : MonoBehaviour
             }
             neverStarted = false;
         }
+
+        if(maxTier == -1 && gameController.blackHole != null) {
+            baseLayerTargetVolume = 1f;
+        }
+        else {
+            baseLayerTargetVolume = 0f;
+        }
+
 
         if(maxTier >= layers.Length) {
             for(int i = 0; i < layers.Length; i++) {

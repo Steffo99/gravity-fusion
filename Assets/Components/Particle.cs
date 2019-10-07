@@ -43,10 +43,11 @@ public class Particle : MonoBehaviour {
             animator.runtimeAnimatorController = gameController.tierAnimation[_tier % gameController.tierAnimation.Length];
             hue.PossibleColors = gameController.tierGradients[_tier % gameController.tierGradients.Length];
             gameController.CheckNewMaxTier(_tier);
-            mainRenderer.rendererPriority = _tier;
-            auraRenderer.rendererPriority = _tier;
-            detailsRenderer.rendererPriority = _tier;
+            mainRenderer.sortingOrder = -_tier;
+            auraRenderer.sortingOrder = -_tier;
+            detailsRenderer.sortingOrder = -_tier;
             disappear.ResetTimer();
+            rigidbody.mass = Mass;
         }
     }
 

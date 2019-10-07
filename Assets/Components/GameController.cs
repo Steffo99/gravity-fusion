@@ -87,14 +87,22 @@ public class GameController : MonoBehaviour
     [HideInInspector]
     public BlackHole blackHole;
 
+    [HideInInspector]
+    public MessageBox messageBox;
+
+    [HideInInspector]
+    public Tutorial tutorial;
+
     protected void Awake() {
         spawner = Camera.main.GetComponent<SpawnOnMouseClick>();
         pusher = Camera.main.GetComponent<PushOnMouseClick>();
         panner = Camera.main.GetComponent<CameraPan>();
         musicManager = GetComponent<MusicManager>();
+        tutorial = GetComponent<Tutorial>();
         simulatedObjects = new List<Gravitation>();
         canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
         upgradePanel = GameObject.FindGameObjectWithTag("UpgradePanel").GetComponent<UpgradePanel>();
+        messageBox = GameObject.FindGameObjectWithTag("MessageBox").GetComponent<MessageBox>();
     }
 
     protected void Start() {
