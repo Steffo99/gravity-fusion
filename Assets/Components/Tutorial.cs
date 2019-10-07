@@ -18,7 +18,7 @@ public class Tutorial : MonoBehaviour {
     }
 
     public void Step2() {
-        gameController.messageBox.Write("Click outside the black hole to spawn a Particle!", Step3);
+        gameController.messageBox.Write("Click outside the Black Hole to spawn a Particle!", Step3);
     }
     
     public void Step3() {
@@ -46,7 +46,7 @@ public class Tutorial : MonoBehaviour {
     }
 
     public void Step8() {
-        gameController.messageBox.Write("Grow the black hole the most you can!", Step9);
+        gameController.messageBox.Write("Grow the Black Hole the most you can!", Step9);
     }
     
     public void Step9() {

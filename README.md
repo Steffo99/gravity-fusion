@@ -7,7 +7,7 @@ _A colorful incremental game_
 Welcome to Gravity Fusion, the best physics simulator in the galaxy!  
 Well... Maybe not the best in the Milky Way, but the best in _your_ galaxy!
 
-In Gravity Fusion you'll create your own galaxy, starting from the black hole at the center and then slowly adding Particles around it!
+In Gravity Fusion you'll create your own galaxy, starting from the Black Hole at the center and then slowly adding Particles around it!
 
 All Particles are affected by the [Law of Universal Gravitation](https://en.wikipedia.org/wiki/Newton's_law_of_universal_gravitation), and so they attract each other, and are attracted towards the black hole. 
 
