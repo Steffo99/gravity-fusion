@@ -305,7 +305,6 @@ MonoBehaviour:
   scaleMultiplier: 3
   particleDurationConstant: 5
   blackHolePrefab: {fileID: 0}
-  blackHole: {fileID: 0}
   particlePrefab: {fileID: 5473375028011702754, guid: e73d8e05bd7498c4a80a63094f4594a8,
     type: 3}
   tierGradients:
@@ -483,9 +482,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 6537c3711346924459455feaf4579420, type: 2}
   - {fileID: 9100000, guid: c0850c00f73c1a7448391a14a513e274, type: 2}
   - {fileID: 9100000, guid: 93a7bcdb67702484494f3bbd777ad2e8, type: 2}
-  - {fileID: 9100000, guid: 93a7bcdb67702484494f3bbd777ad2e8, type: 2}
-  simulatedObjects: []
-  maxTierPresent: 0
+  - {fileID: 9100000, guid: ca5534acdf3ff4d4ab5e91aa33b49907, type: 2}
   upgradePushForce:
   - 0
   - 100
@@ -495,21 +492,25 @@ MonoBehaviour:
   - 1000000
   upgradePushRadius:
   - 0
-  - 1
-  - 10
-  - 100
-  - 1000
-  - 10000
-  upgradeParticleCount: 010000000200000003000000040000000500000006000000
+  - 3
+  - 9
+  - 27
+  - 81
+  - 243
+  upgradeParticleCount: 01000000020000000300000005000000070000000a000000
   upgradeParticleTiers: 000000000100000002000000030000000400000005000000
   _levelAntig: 0
   _levelMatter: 0
   _levelFission: 0
+  simulatedObjects: []
+  maxTierPresent: 0
   spawner: {fileID: 0}
   pusher: {fileID: 0}
   panner: {fileID: 0}
   musicManager: {fileID: 0}
   canvas: {fileID: 0}
+  blackHole: {fileID: 0}
+  upgradePanel: {fileID: 0}
 --- !u!114 &1086337020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,8 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d6ca16f02f68b44bdb6d018c9eb490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLayer: {fileID: 787973444833592173}
   changeSpeed: 1
+  baseLayer: {fileID: 787973444833592173}
   layers:
   - {fileID: 4850948939192426854}
   - {fileID: 1636788351}

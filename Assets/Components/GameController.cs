@@ -86,14 +86,18 @@ public class GameController : MonoBehaviour
     [HideInInspector]
     public BlackHole blackHole;
 
+    [HideInInspector]
+    public GameObject upgradePanel;
+
     protected void Awake() {
         spawner = Camera.main.GetComponent<SpawnOnMouseClick>();
         pusher = Camera.main.GetComponent<PushOnMouseClick>();
         panner = Camera.main.GetComponent<CameraPan>();
         musicManager = GetComponent<MusicManager>();
         simulatedObjects = new List<Gravitation>();
-        blackHole = GameObject.FindGameObjectWithTag("BlackHole").GetComponent<BlackHole>();
         canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
+        blackHole = GameObject.FindGameObjectWithTag("BlackHole").GetComponent<BlackHole>();
+        upgradePanel = GameObject.FindGameObjectWithTag("UpgradePanel");
     }
 
     protected void Start() {

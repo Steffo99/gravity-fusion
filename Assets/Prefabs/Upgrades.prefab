@@ -884,7 +884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e88c8ce76416bd43959fc254130d130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackHole: {fileID: 0}
 --- !u!1 &6071206155449790856
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,11 +974,11 @@ GameObject:
   - component: {fileID: 6071206155585637458}
   m_Layer: 5
   m_Name: Upgrades
-  m_TagString: Untagged
+  m_TagString: UpgradePanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6071206155585637459
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1090,11 +1089,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206153612675157}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1200,10 +1194,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: cost
-      value: 25
+      propertyPath: m_Name
+      value: Upgrade Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -1220,11 +1214,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206153612675157}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1330,15 +1319,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: level
-      value: 3
+      propertyPath: m_Name
+      value: Upgrade Button (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: cost
-      value: 250
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: level
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -1355,11 +1349,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206155747220281}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1465,15 +1454,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: type
-      value: 2
+      propertyPath: m_Name
+      value: Upgrade Button
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: cost
-      value: 25
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -1490,11 +1484,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206155747220281}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1600,10 +1589,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Button (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: type
-      value: 2
+      propertyPath: cost
+      value: 12500
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
@@ -1612,8 +1606,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: cost
-      value: 500
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -1630,11 +1624,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206155747220281}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1740,10 +1729,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Button (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: type
-      value: 2
+      propertyPath: cost
+      value: 225000
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
@@ -1752,8 +1746,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: cost
-      value: 1000
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -1770,11 +1764,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206153612675157}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1880,15 +1869,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: level
-      value: 4
+      propertyPath: m_Name
+      value: Upgrade Button (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: cost
-      value: 500
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: level
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -1905,11 +1899,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206154561887604}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2015,10 +2004,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Button (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: type
-      value: 1
+      propertyPath: cost
+      value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
@@ -2027,8 +2021,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: cost
-      value: 55
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -2045,11 +2039,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206154561887604}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2155,10 +2144,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Button (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: type
-      value: 1
+      propertyPath: cost
+      value: 240000
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
@@ -2167,8 +2161,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: cost
-      value: 500
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -2185,11 +2179,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206155747220281}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2295,10 +2284,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Button (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: type
-      value: 2
+      propertyPath: cost
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
@@ -2307,8 +2301,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: cost
-      value: 250
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -2325,11 +2319,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206154561887604}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2435,10 +2424,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Button (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: type
-      value: 1
+      propertyPath: cost
+      value: 1500000
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
@@ -2447,8 +2441,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: cost
-      value: 1000
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -2465,11 +2459,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206154561887604}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2575,15 +2564,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: type
-      value: 1
+      propertyPath: m_Name
+      value: Upgrade Button
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: cost
-      value: 25
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -2600,11 +2594,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206155747220281}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2710,10 +2699,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Button (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: type
-      value: 2
+      propertyPath: cost
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
@@ -2722,8 +2716,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: cost
-      value: 55
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -2740,11 +2734,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206153612675157}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2850,15 +2839,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: level
-      value: 2
+      propertyPath: m_Name
+      value: Upgrade Button (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: cost
-      value: 55
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: level
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -2875,11 +2869,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206154561887604}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2985,10 +2974,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: m_Name
+      value: Upgrade Button (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: type
-      value: 1
+      propertyPath: cost
+      value: 30000
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
@@ -2997,8 +2991,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: cost
-      value: 250
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}
@@ -3015,11 +3009,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6071206153612675157}
     m_Modifications:
-    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: Upgrade Button (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746833, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3125,15 +3114,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+    - target: {fileID: 6631481499280746846, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
-      propertyPath: level
-      value: 5
+      propertyPath: m_Name
+      value: Upgrade Button (4)
       objectReference: {fileID: 0}
     - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
         type: 3}
       propertyPath: cost
-      value: 1000
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6631481499280746834, guid: 12df848b888b3fb42bc7e87f205b2b6e,
+        type: 3}
+      propertyPath: level
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12df848b888b3fb42bc7e87f205b2b6e, type: 3}

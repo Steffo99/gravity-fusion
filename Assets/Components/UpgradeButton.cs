@@ -23,6 +23,8 @@ public class UpgradeButton : MonoBehaviour
     public Sprite hoveredSprite;
     public Sprite boughtSprite;
 
+    protected bool started;
+
     protected bool CanBeBought {
         get {
             return gameController.blackHole.UnspentMass >= cost;
@@ -46,24 +48,29 @@ public class UpgradeButton : MonoBehaviour
     protected void Awake() {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         image = GetComponent<Image>();
+        started = false;
+    }
+
+    protected void OnEnable() {
+        if(started) RefreshUpgrades();
     }
 
     protected void Start() {
-        RefreshUpgrades();
+        started = true;
     }
 
     public void OnPointerEnter() {
         if(!HasBeenBought && CanBeBought) {
             image.sprite = hoveredSprite;
-            gameController.canvas.BroadcastMessage("DisplayCost", cost);
         }
+        gameController.canvas.BroadcastMessage("DisplayCost", cost);
     }
 
     public void OnPointerExit() {
         if(!HasBeenBought && CanBeBought) {
             image.sprite = canBuySprite;
-            gameController.canvas.BroadcastMessage("DisplayCost", -1f);
         }
+        gameController.canvas.BroadcastMessage("DisplayCost", -1f);
     }
     
     public void OnPointerClick() {

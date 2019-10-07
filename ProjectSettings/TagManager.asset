@@ -7,6 +7,7 @@ TagManager:
   - Particle
   - BlackHole
   - Canvas
+  - UpgradePanel
   layers:
   - Default
   - TransparentFX

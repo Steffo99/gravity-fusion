@@ -6,18 +6,31 @@ using UnityEngine;
 public class Particle : MonoBehaviour {
     protected int _tier = 0;
 
+    [HideInInspector]
     public new Rigidbody2D rigidbody;
+    [HideInInspector]
     public Gravitation gravitation;
+    [HideInInspector]
     public GameController gameController;
+    [HideInInspector]
     public Merger merger;
+    [HideInInspector]
     public Collider2D particleCollider;
+    [HideInInspector]
     public Collider2D mergeCollider;
+    [HideInInspector]
     public Emitter emitter;
+    [HideInInspector]
     public Animator animator;
+    [HideInInspector]
     public Hue hue;
+    [HideInInspector]
     public SpriteRenderer mainRenderer;
+    [HideInInspector]
     public SpriteRenderer auraRenderer;
+    [HideInInspector]
     public SpriteRenderer detailsRenderer;
+    [HideInInspector]
     public Disappear disappear;
 
     public int Tier {
@@ -34,7 +47,7 @@ public class Particle : MonoBehaviour {
         }
     }
 
-    float Scale {
+    public float Scale {
         get {
             return transform.localScale.x;
         }
