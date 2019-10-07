@@ -63,7 +63,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -99,7 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6157b8c0c98584db4becc892a8f6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameController: {fileID: 0}
   mouseButton: 0
   spawnedTier: 0
   spawnCount: 1
@@ -116,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a8a9da7e5b8734eb709105fd6e30e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomMultiplier: 3
+  zoomMultiplier: 10
   zoomAxisName: MouseWheel
 --- !u!114 &6700387586635078816
 MonoBehaviour:
