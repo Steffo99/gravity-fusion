@@ -7,7 +7,7 @@ public class PushOnMouseClick : MonoBehaviour
     public int mouseButton = 1;
     public float pushForce = 0;
     public float pushRadius = 0;
-    
+
     protected GameController gameController;
 
     protected void Awake() {
@@ -20,13 +20,13 @@ public class PushOnMouseClick : MonoBehaviour
 
     protected void Update()
     {
-        if(!gameController.upgradePanel.activeSelf && Input.GetMouseButton(mouseButton)) {
+        if(!gameController.upgradePanel.gameObject.activeSelf && Input.GetMouseButton(mouseButton)) {
             Vector3 mousePosition = GetWorldMousePosition();
             Collider2D[] affected = Physics2D.OverlapCircleAll(mousePosition, pushRadius);
             foreach(Collider2D collider in affected) {
                 float distance = Vector3.Distance(mousePosition, collider.transform.position);
                 Vector2 direction = (collider.transform.position - mousePosition).normalized;
-                collider.attachedRigidbody?.AddForce(direction * pushForce / Mathf.Pow(distance, 2));
+                collider.attachedRigidbody?.AddForce(direction * pushForce / distance);
             }
         }
     }

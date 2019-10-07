@@ -69,6 +69,9 @@ public class GameController : MonoBehaviour
 
     [Header("References")]
     [HideInInspector]
+    public UpgradePanel upgradePanel;
+    
+    [HideInInspector]
     public SpawnOnMouseClick spawner;
     
     [HideInInspector]
@@ -86,8 +89,6 @@ public class GameController : MonoBehaviour
     [HideInInspector]
     public BlackHole blackHole;
 
-    [HideInInspector]
-    public GameObject upgradePanel;
 
     protected void Awake() {
         spawner = Camera.main.GetComponent<SpawnOnMouseClick>();
@@ -97,7 +98,7 @@ public class GameController : MonoBehaviour
         simulatedObjects = new List<Gravitation>();
         canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
         blackHole = GameObject.FindGameObjectWithTag("BlackHole").GetComponent<BlackHole>();
-        upgradePanel = GameObject.FindGameObjectWithTag("UpgradePanel");
+        upgradePanel = GameObject.FindGameObjectWithTag("UpgradePanel").GetComponent<UpgradePanel>();
     }
 
     protected void Start() {
