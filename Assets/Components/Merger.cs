@@ -7,7 +7,9 @@ public class Merger : MonoBehaviour
 {
     public float mergeAfterSeconds;
 
-    protected bool mergeEnabled;
+    [HideInInspector]
+    public bool mergeEnabled;
+
     protected List<Merger> mergeCandidates;
 
     [HideInInspector]
@@ -65,6 +67,11 @@ public class Merger : MonoBehaviour
     }
 
     protected void DoMerge() {
+        if(particle.gameController.blackHole == null) {
+            particle.gameController.blackHole = Instantiate(particle.gameController.blackHolePrefab, transform.position, Quaternion.identity).GetComponent<BlackHole>();
+            Destroy(this.gameObject);
+            return;
+        }
         particle.Tier += 1;
         foreach(Merger merged in mergeCandidates.ToArray()) {
             if(merged == null) continue;

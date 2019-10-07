@@ -9,6 +9,12 @@ public class CameraPan : MonoBehaviour
 
     protected Vector3? lastMousePosition;
 
+    protected GameController gameController;
+
+    protected void Awake() {
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    }
+
     private void Start() {
         lastMousePosition = null;
     }
@@ -26,7 +32,11 @@ public class CameraPan : MonoBehaviour
         }
         lastMousePosition = currentMousePosition;
         if(Input.GetAxisRaw("ResetCamera") > 0) {
-            Camera.main.transform.position = new Vector3(0, 0, Camera.main.transform.position.z);
+            if(gameController.blackHole != null) {
+                Camera.main.transform.position = new Vector3(gameController.blackHole.transform.position.x,
+                                                             gameController.blackHole.transform.position.y,
+                                                             Camera.main.transform.position.z);
+            } 
         }
     }
 }

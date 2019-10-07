@@ -16,6 +16,7 @@ public class TextFromBlackHoleMass : MonoBehaviour
 
     protected void Update()
     {
+        if(gameController.blackHole == null) return;
         text.text = gameController.blackHole.Mass.ToString("0");
     }
 }

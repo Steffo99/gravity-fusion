@@ -6,6 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class BlackHole : MonoBehaviour
 {
+    [BeforeStart]
+    public float startingMass;
+    [AfterStart]
     public float spentMass;
 
     public float Mass {
@@ -43,7 +46,7 @@ public class BlackHole : MonoBehaviour
     }
 
     protected void Start() {
-        Mass = 50;
+        Mass = startingMass;
         spentMass = 0;
     }
 
