@@ -2,6 +2,15 @@
 
 _A colorful incremental game_
 
+[![](https://img.shields.io/badge/overall-TBD-lightgrey) 
+![](https://img.shields.io/badge/fun-TBD-lightgrey) 
+![](https://img.shields.io/badge/innovation-TBD-lightgrey) 
+![](https://img.shields.io/badge/theme-TBD-lightgrey) 
+![](https://img.shields.io/badge/graphics-TBD-lightgrey) 
+![](https://img.shields.io/badge/audio-TBD-lightgrey) 
+![](https://img.shields.io/badge/humor-TBD-lightgrey)
+![](https://img.shields.io/badge/mood-TBD-lightgrey)](https://ldjam.com/events/ludum-dare/45/$165131)
+
 ## About
 
 Welcome to Gravity Fusion, the best physics simulator in the galaxy!  
@@ -9,13 +18,13 @@ Well... Maybe not the best in the Milky Way, but the best in _your_ galaxy!
 
 In Gravity Fusion you'll create your own galaxy, starting from the Black Hole at the center and then slowly adding Particles around it!
 
-All Particles are affected by the [Law of Universal Gravitation](https://en.wikipedia.org/wiki/Newton's_law_of_universal_gravitation), and so they attract each other, and are attracted towards the black hole. 
+All Particles are affected by the [Law of Universal Gravitation](https://en.wikipedia.org/wiki/Newton's_law_of_universal_gravitation), and so they attract each other, and are attracted towards the Black Hole. 
 
-If 6 Particles of the same quality touch, they merge into a heavier, higher quality Particle that may autonomously produce smaller Particles. 
+If 6 Particles of the same quality touch, they merge into a heavier, higher quality Particle, that may autonomously produce smaller Particles. 
 
-Be careful: the black hole can eat your particles, gaining more Mass!  
+Be careful: the Black Hole can eat your particles, gaining more Mass!  
 
-However, if you let your black hole grow, you may be able to buy some upgrades from a friendly alien...
+However, if you let your Black Hole grow, you may be able to buy some upgrades from a friendly alien...
 
 ![](/Assets/Sprites/NAvi_cella.png)
 
