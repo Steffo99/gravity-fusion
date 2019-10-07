@@ -13,22 +13,19 @@ public class GameController : MonoBehaviour
 
     [Header("Black Hole")]
     public GameObject blackHolePrefab;
-    public BlackHole blackHole;
 
     [Header("Particles")]
     public GameObject particlePrefab;
     public Gradient[] tierGradients;
     public RuntimeAnimatorController[] tierAnimation;
-    public List<Gravitation> simulatedObjects;
-    public int maxTierPresent;
 
-    [Header("Upgrades")]
+    [Header("Upgrade Parameters")]
     public float[] upgradePushForce;
     public float[] upgradePushRadius;
     public int[] upgradeParticleCount;
     public int[] upgradeParticleTiers;
 
-    [Header("Bought Upgrades")]
+    [Header("Bought Updates")]
     public int _levelAntig = 0;
     public int _levelMatter = 0;
     public int _levelFission = 0;
@@ -64,12 +61,30 @@ public class GameController : MonoBehaviour
         }
     }
 
+    [Header("Simulation Status")]
+    [HideInInspector]
+    public List<Gravitation> simulatedObjects;
+    [HideInInspector]
+    public int maxTierPresent;
+
     [Header("References")]
+    [HideInInspector]
     public SpawnOnMouseClick spawner;
+    
+    [HideInInspector]
     public PushOnMouseClick pusher;
+    
+    [HideInInspector]
     public CameraPan panner;
+
+    [HideInInspector]
     public MusicManager musicManager;
+
+    [HideInInspector]
     public Canvas canvas;
+
+    [HideInInspector]
+    public BlackHole blackHole;
 
     protected void Awake() {
         spawner = Camera.main.GetComponent<SpawnOnMouseClick>();

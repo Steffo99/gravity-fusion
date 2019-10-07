@@ -9,13 +9,9 @@ public class Gravitation : MonoBehaviour
     [Header("Config")]
     public bool isStatic;
 
-    [Header("Forces")]
-    protected Vector3 appliedForce;
-
-    [Header("Internals")]
+    [HideInInspector]
     public int positionInList;
 
-    [Header("References")]
     protected new Rigidbody2D rigidbody;
     protected GameController gameController;
 
@@ -53,7 +49,6 @@ public class Gravitation : MonoBehaviour
 
     private void Start()
     {
-        appliedForce = new Vector3(0f, 0f, 0f);
     }
 
     // O(n²)
@@ -67,6 +62,5 @@ public class Gravitation : MonoBehaviour
             if(!this.isStatic) rigidbody.AddForce(direction * force);
             if(!other.isStatic) other.rigidbody.AddForce(-direction * force);
         }
-        appliedForce = new Vector3(0, 0, 0);
     }
 }

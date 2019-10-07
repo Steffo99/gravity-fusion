@@ -7,15 +7,15 @@ using UnityEngine.UI;
 public class TextFromBlackHoleMass : MonoBehaviour
 {
     protected Text text;
-    public BlackHole blackHole;
+    protected GameController gameController;
 
     protected void Awake() {
         text = GetComponent<Text>();
-        blackHole = GameObject.FindGameObjectWithTag("BlackHole").GetComponent<BlackHole>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     protected void Update()
     {
-        text.text = blackHole.Mass.ToString("0");
+        text.text = gameController.blackHole.Mass.ToString("0");
     }
 }

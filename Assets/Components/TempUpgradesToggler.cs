@@ -6,7 +6,11 @@ public class TempUpgradesToggler : MonoBehaviour
 {
     public GameObject upgrades;
 
-    void Update()
+    protected void Start() {
+        Debug.LogWarning("TempUpgradesToggler should not be used.");
+    }
+
+    protected void Update()
     {
         if(Input.GetKeyDown(KeyCode.P)) {
             upgrades.SetActive(!upgrades.activeSelf);

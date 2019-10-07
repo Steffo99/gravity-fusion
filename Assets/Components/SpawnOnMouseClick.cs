@@ -5,11 +5,12 @@ using UnityEngine;
 public class SpawnOnMouseClick : MonoBehaviour
 {
     [Header("Config")]
-    public GameController gameController;
-    public int mouseButton;
-    public int spawnedTier;
-    public int spawnCount;
-    public float appliedForce;
+    public int mouseButton = 0;
+    public int spawnedTier = 0;
+    public int spawnCount = 1;
+    public float appliedForce = 0.1f;
+
+    protected GameController gameController;
 
     protected void Awake() {
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();

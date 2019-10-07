@@ -12,10 +12,12 @@ public enum UpgradeType {
 
 public class UpgradeButton : MonoBehaviour 
 {
+    [Header("Properties")]
     public int cost;
     public int level;
     public UpgradeType type;
 
+    [Header("Sprites")]
     public Sprite cantBuySprite;
     public Sprite canBuySprite;
     public Sprite hoveredSprite;
@@ -33,9 +35,8 @@ public class UpgradeButton : MonoBehaviour
                 case UpgradeType.ANTIG: return gameController.LevelAntig >= level;
                 case UpgradeType.MATTER: return gameController.LevelMatter >= level;
                 case UpgradeType.FISSION: return gameController.LevelFission >= level;
+                default: return false;
             }
-            //ok c#
-            return false;
         }
     }
 

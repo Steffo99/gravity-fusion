@@ -9,7 +9,6 @@ public class Hue : MonoBehaviour
 
     protected Particle particle;
     protected Material material;
-
     protected Color color;
 
     protected void Awake() {

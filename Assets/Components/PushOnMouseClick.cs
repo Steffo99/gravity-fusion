@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class PushOnMouseClick : MonoBehaviour
 {
-    [Header("Config")]
-    public int mouseButton;
-    public float pushForce;
-    public float pushRadius;
+    public int mouseButton = 1;
+    public float pushForce = 0;
+    public float pushRadius = 0;
 
     protected Vector3 GetWorldMousePosition() {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    void Update()
+    protected void Update()
     {
         if(Input.GetMouseButton(mouseButton)) {
             Vector3 mousePosition = GetWorldMousePosition();

@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class BlackHole : MonoBehaviour
 {
-    protected float spentMass;
+    public float spentMass;
 
     public float Mass {
         get {

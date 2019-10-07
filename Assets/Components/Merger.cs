@@ -5,13 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class Merger : MonoBehaviour
 {
+    public float mergeAfterSeconds;
+
+    protected bool mergeEnabled;
+    protected List<Merger> mergeCandidates;
+
     [HideInInspector]
     public Particle particle;
-    public float mergeAfterSeconds;
-    
-    protected bool mergeEnabled;
-
-    protected List<Merger> mergeCandidates;
 
     protected Collider2D Collider {
         get {

@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Disappear : MonoBehaviour
 {
-    public float health;
+    protected float _health;    
     protected Particle particle;
+
+    public float Health {
+        get {
+            return _health;
+        }
+    }
 
     protected void Awake() {
         particle = GetComponent<Particle>();
@@ -16,13 +22,13 @@ public class Disappear : MonoBehaviour
     }
 
     public void ResetTimer() {
-        health = 1f;
+        _health = 1f;
     }
 
     protected void Update() {
-        health -= Mathf.Pow(particle.gameController.particleDurationConstant, particle.gameController.maxTierPresent - particle.Tier - 4) * Time.deltaTime;
+        _health -= Mathf.Pow(particle.gameController.particleDurationConstant, particle.gameController.maxTierPresent - particle.Tier - 4) * Time.deltaTime;
 
-        if(health < 0) {
+        if(_health < 0) {
             Destroy(this.gameObject);
         }
     }

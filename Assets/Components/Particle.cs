@@ -34,11 +34,11 @@ public class Particle : MonoBehaviour {
         }
     }
 
-    public float Scale {
+    float Scale {
         get {
             return transform.localScale.x;
         }
-        set {
+        protected set {
             transform.localScale = new Vector3(value, value, 1);
         }
     }

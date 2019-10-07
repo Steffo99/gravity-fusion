@@ -12,7 +12,7 @@ public class TextFromCost : MonoBehaviour
     }
 
     public void DisplayCost(float cost) {
-        if(cost > 0) {
+        if(cost >= 0) {
             text.text = cost.ToString("0");
         }
         else {
