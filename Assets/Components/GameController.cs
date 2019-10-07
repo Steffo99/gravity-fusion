@@ -62,9 +62,7 @@ public class GameController : MonoBehaviour
     }
 
     [Header("Simulation Status")]
-    [HideInInspector]
     public List<Gravitation> simulatedObjects;
-    [HideInInspector]
     public int maxTierPresent;
 
     [Header("References")]
@@ -89,7 +87,6 @@ public class GameController : MonoBehaviour
     [HideInInspector]
     public BlackHole blackHole;
 
-
     protected void Awake() {
         spawner = Camera.main.GetComponent<SpawnOnMouseClick>();
         pusher = Camera.main.GetComponent<PushOnMouseClick>();
@@ -97,7 +94,6 @@ public class GameController : MonoBehaviour
         musicManager = GetComponent<MusicManager>();
         simulatedObjects = new List<Gravitation>();
         canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
-        blackHole = GameObject.FindGameObjectWithTag("BlackHole").GetComponent<BlackHole>();
         upgradePanel = GameObject.FindGameObjectWithTag("UpgradePanel").GetComponent<UpgradePanel>();
     }
 

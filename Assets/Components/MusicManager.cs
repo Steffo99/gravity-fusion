@@ -31,7 +31,15 @@ public class MusicManager : MonoBehaviour
         neverStarted = true;
     }
 
+    protected GameController gameController;
+
+    protected void Awake() {
+        gameController = GetComponent<GameController>();
+    }
+
     public void UpdateLayers(int maxTier) {
+        if(gameController.blackHole == null) return;
+
         if(maxTier == -1) {
             baseLayerTargetVolume = 1f;
         }

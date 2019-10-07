@@ -1,4 +1,4 @@
-# LD45
+# ![](/Assets/Media/github_icon.png) LD45
 
 A Ludum Dare 45 Project
 

@@ -20,7 +20,7 @@ public class SpawnOnMouseClick : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    void Update()
+    protected void Update()
     {
         if(!gameController.upgradePanel.gameObject.activeSelf && Input.GetMouseButtonDown(mouseButton)) {
             Vector3 mousePosition = GetWorldMousePosition();
