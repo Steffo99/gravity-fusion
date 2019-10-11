@@ -10,7 +10,7 @@ public class Tutorial : MonoBehaviour {
     }
 
     protected void Start() {
-        gameController.messageBox.Write("Welcome to Black Hole: Fusion!", Step1);
+        gameController.messageBox.Write("Welcome to Gravity Fusion!", Step1);
     }
 
     public void Step1() {
