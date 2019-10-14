@@ -13,7 +13,7 @@ public class TempUpgradesToggler : MonoBehaviour
     protected void Update()
     {
         if(gameController.blackHole != null) {
-            if(Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape)) {
+            if(Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Menu)) {
                 gameController.upgradePanel.gameObject.SetActive(!gameController.upgradePanel.gameObject.activeSelf);
             }
         }
