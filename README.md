@@ -4,14 +4,14 @@ _A colorful incremental game_
 
 ## Ludum Dare 45: Jam Entry
 
-[![](https://img.shields.io/badge/overall-TBD-lightgrey) 
-![](https://img.shields.io/badge/fun-TBD-lightgrey) 
-![](https://img.shields.io/badge/innovation-TBD-lightgrey) 
-![](https://img.shields.io/badge/theme-TBD-lightgrey) 
-![](https://img.shields.io/badge/graphics-TBD-lightgrey) 
-![](https://img.shields.io/badge/audio-TBD-lightgrey) 
-![](https://img.shields.io/badge/humor-TBD-lightgrey)
-![](https://img.shields.io/badge/mood-TBD-lightgrey)](https://ldjam.com/events/ludum-dare/45/gravity-fusion)
+[![](https://img.shields.io/badge/overall-3.8-yellowgreen) 
+![](https://img.shields.io/badge/fun-3.6-yellowgreen) 
+![](https://img.shields.io/badge/innovation-3.1-yellowgreen) 
+![](https://img.shields.io/badge/theme-3.7-yellowgreen) 
+![](https://img.shields.io/badge/graphics-3.6-yellowgreen) 
+![](https://img.shields.io/badge/audio-3.4-yellowgreen) 
+![](https://img.shields.io/badge/humor-3.0-yellowgreen)
+![](https://img.shields.io/badge/mood-3.8-yellowgreen)](https://ldjam.com/events/ludum-dare/45/gravity-fusion)
 
 ## About
 
