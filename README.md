@@ -1,6 +1,12 @@
-# ![](/Assets/Media/github_icon.png) Gravity Fusion
+<div align="center">
+
+![](.media/icon-128x128_round)
+
+# Gravity Fusion
 
 _A colorful incremental game_
+
+</div>
 
 ## Ludum Dare 45: Jam Entry
 
